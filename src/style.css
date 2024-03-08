@@ -1,0 +1,112 @@
+@font-face {
+  font-family: figbold;
+  src: url('../assets/fonts/static/Figtree-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: fig;
+  src: url('../assets/fonts/static/Figtree-SemiBold.ttf') format('truetype');
+  font-weight: 500;
+}
+
+:root {
+  --prim: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: fig, 'Courier New', Courier, monospace;
+}
+
+.main-content {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--prim);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--white);
+  padding: 2rem;
+  box-shadow: 5px 5px 0 var(--black);
+  border: 1.5px solid var(--black);
+  border-radius: 1.5rem;
+  width: 30rem;
+  transition: 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.card:hover {
+  box-shadow: 10px 10px 0 var(--black);
+}
+
+.card__header {
+  width: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.card__img {
+  width: 100%;
+  object-fit: cover;
+}
+.btn {
+  background-color: var(--prim);
+  font-family: figbold;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.card__publish-info {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.card__heading {
+  font-size: 1.9rem;
+  font-family: figbold;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card__heading:hover {
+  color: var(--prim);
+}
+.card__info {
+  font-size: 1.2rem;
+  color: var(--grey);
+  font-family: fig;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.card__footer {
+  display: flex;
+  align-items: center;
+}
+.card__user-img {
+  width: 3rem;
+  margin-right: 1rem;
+}
+.card__user-img-caption {
+  font-family: figbold;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 50%;
+  }
+}
